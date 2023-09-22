@@ -15,14 +15,14 @@ bg_img = pygame.transform.scale(bg_img,(WIDTH,HEIGHT))
 # Fonte 
 font = pygame.font.Font('Experimentos\luis/assets/font\Pixeled.ttf', 20)
 
-def write_text(text_content, font, color, pos_x, pos_y):
+def write_text(text_content, font, color, pos_x, pos_y): # Função para escrever texto na tela 
     text = font.render(text_content, True, color)
     screen.blit(text, (pos_x, pos_y))
 
-def help_screen():
-    
-    help_screen_bg = pygame.image.load('Experimentos\luis/assets\images\help_screen.png')
-    help_screen_bg = pygame.transform.scale(help_screen_bg,(WIDTH,HEIGHT))
+def instructions_screen(): # A tela de instruções
+    # Imagem de Background
+    instructions_screen_bg = pygame.image.load('Experimentos\luis/assets\images\help_screen.png')
+    instructions_screen_bg = pygame.transform.scale(instructions_screen_bg,(WIDTH,HEIGHT))
     
     pygame.display.set_caption("Pedro: God of the Math") # Coloca o nome do jogo
     # Título e Ícone
@@ -34,7 +34,7 @@ def help_screen():
     tittle_font = pygame.font.Font('Experimentos\luis/assets/font\Pixeled.ttf', 30)
 
     while True:
-        screen.blit(help_screen_bg, (0,0))
+        screen.blit(instructions_screen_bg, (0,0))
         mouse_pos = pygame.mouse.get_pos()
         # Imagem do botão (e a sua conversão para o tamanho ideal)
         BUTTON_IMAGE = pygame.image.load("Experimentos\luis/assets\images\exit_icon.png")
@@ -102,7 +102,7 @@ def main_menu():
                 if START_BUTTON.clicked(mouse_pos):
                     print("Clicado")
                 if INSTRUCTIONS_BUTTON.clicked(mouse_pos):
-                    help_screen()
+                    instructions_screen()
 
         pygame.display.update()
 

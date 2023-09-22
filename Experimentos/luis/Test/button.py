@@ -34,6 +34,5 @@ class Button():
         position_y = position[1] # A posição y é o segundo elemento da tupla
         if position_x in range(self.image_rect.left , self.image_rect.right) and position_y in range(self.image_rect.top, self.image_rect.bottom):
             self.text = self.font.render(self.text_content, True, "white")
-        # Verificar se esse else tem necessidade
         else:
             self.text = self.font.render(self.text_content, True, "black") 
