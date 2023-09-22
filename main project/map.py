@@ -1,11 +1,9 @@
 import pygame
 from level import Level
 from pygame.locals import *
+from collectibles import Collectible
 
 pygame.init()
-
-vertical_wall = pygame.image.load("assets/vertical-wall.png")
-horizontal_wall = pygame.image.load("assets/horizontal-wall.png")
 
 class Map():
   def __init__(self,screen):
@@ -25,10 +23,14 @@ class Map():
     self.draw_map(self.screen, self.x, self.y, True) # Vai desenhar o mapa
     
     # escolhendo os indices a colocar os coletáveis na matriz
-    self.all_collectibles = {'r':Collectible('r'),'g':Collectible('g'),'b':Collectible('b'),'y':Collectible('y')}
+    self.all_collectibles = {
+      'r':Collectible('r'),
+      'g':Collectible('g'),
+      'b':Collectible('b'),
+      'y':Collectible('y')}
 
     for colle in self.all_collectibles.values():
-      self.matriz_game[0][colle.pos_x][colle.pos_y] += colle.id
+      self.matriz_game[colle.pos_x][colle.pos_y] += colle.id
     # fim da escolha
 
   def draw_map(self,screen,x,y,born): 
@@ -60,14 +62,14 @@ class Map():
             pygame.draw.rect(screen, (255,255,255), rect)
 
           # desenhando coletáveis na tela dados os pontos escolhidos
-            colle_x = int(wall_x + 22) # colle x/y 
-            colle_y = int(wall_y + 22) # não são indices da matriz, e sim a posição que vão ser desenhados
+            item_x += 22  # colle x/y 
+            item_y += 22 # não são indices da matriz, e sim a posição que vão ser desenhados
 
-            colle_ids = ['r','g','b','y']
+            item_ids = ['r','g','b','y']
           
-            if direction in colle_ids:
-              self.all_collectibles[direction].rect = (colle_x,colle_y,20,20)
-              pygame.draw.rect(screen,self.all_collectibles[direction].color,self.all_collectibles[direction].rect)
+            if item in item_ids:
+              self.all_collectibles[item].rect = (item_x,item_y,20,20)
+              pygame.draw.rect(screen,self.all_collectibles[item].color,self.all_collectibles[item].rect)
             # fim do desenho dos coletáveis
 
           if item == "S" and born:
@@ -108,7 +110,7 @@ class Map():
     for colle in self.all_collectibles.values():
       if player.colliderect(colle.rect):
         colle.collected = True
-        self.matriz_game[0][colle.pos_x][colle.pos_y] = self.matriz_game[0][colle.pos_x][colle.pos_y][:-1]
+        self.matriz_game[colle.pos_x][colle.pos_y] = self.matriz_game[colle.pos_x][colle.pos_y][:-1]
     # fim da analise da colisão
 
   def update(self,player):

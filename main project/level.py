@@ -36,23 +36,14 @@ class Level:
         if (0,0,0) == down_point: string += "v"
 
         # Verifica o começo e o fim do labirinto, se a cor for vermelha, então, ele irá colocar um E na string, caso seja verda, será S
-        # for point in all_points:
-        #   if point == (0,0,255):
-        #     string += "E"
-        #   if point == (0,255,0):
-        #     string += "S"
+        for point in all_points:
+          if point == (0,0,255):
+            string += "E"
+          if point == (0,255,0):
+            string += "S"
 
         elements_row.append(string)
-        # cv2.imwrite(f"foto/foto-{row}-{column}.png", slice_photo)
-        # cv2.imwrite(f"foto/fotofatia-{row}-{column}.png", up_point)
-        if row == 0 and column==13:
-          # cv2.imwrite(f"aaaa-{row}-{column}.png", slice_photo[0,8])
-          # cv2.imwrite(f"bbbb-{row}-{column}.png", slice_photo)
-          print("0,13", string)
-        if row == 0 and column==14:
-          print("0,14", string)
       self.matriz.append(elements_row)
-    print(self.matriz)
     return self.matriz
 
 # level = Level()
