@@ -62,15 +62,15 @@ class Map():
             pygame.draw.rect(screen, (255,255,255), rect)
 
           # desenhando coletáveis na tela dados os pontos escolhidos
-            item_x += 22  # colle x/y 
-            item_y += 22 # não são indices da matriz, e sim a posição que vão ser desenhados
+          item_x += 22  # colle x/y 
+          item_y += 22 # não são indices da matriz, e sim a posição que vão ser desenhados
 
-            item_ids = ['r','g','b','y']
-          
-            if item in item_ids:
-              self.all_collectibles[item].rect = (item_x,item_y,20,20)
-              pygame.draw.rect(screen,self.all_collectibles[item].color,self.all_collectibles[item].rect)
-            # fim do desenho dos coletáveis
+          item_ids = ['r','g','b','y']
+        
+          if item in item_ids:
+            self.all_collectibles[item].rect = (item_x,item_y,20,20)
+            pygame.draw.rect(screen,self.all_collectibles[item].color,self.all_collectibles[item].rect)
+          # fim do desenho dos coletáveis
 
           if item == "S" and born:
             self.x = - square_size * (column) + square_size * 4 
