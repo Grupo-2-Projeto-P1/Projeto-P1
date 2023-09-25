@@ -9,11 +9,11 @@ HEIGHT = 700
 
 # Definição do tamanho da tela e definição do background
 screen = pygame.display.set_mode((WIDTH,HEIGHT)) # Cria uma tela e determina o seu tamanho
-bg_img = pygame.image.load('Experimentos/luis/assets/images/main_background.png')
+bg_img = pygame.image.load('../assets/images/main_background.png')
 bg_img = pygame.transform.scale(bg_img,(WIDTH,HEIGHT))
 
 # Fonte 
-font = pygame.font.Font('Experimentos\luis/assets/font\Pixeled.ttf', 20)
+font = pygame.font.Font('../assets/font\Pixeled.ttf', 20)
 
 def write_text(text_content, font, color, pos_x, pos_y): # Função para escrever texto na tela 
     text = font.render(text_content, True, color)
@@ -21,23 +21,23 @@ def write_text(text_content, font, color, pos_x, pos_y): # Função para escreve
 
 def instructions_screen(): # A tela de instruções
     # Imagem de Background
-    instructions_screen_bg = pygame.image.load('Experimentos\luis/assets\images\help_screen.png')
+    instructions_screen_bg = pygame.image.load('../assets\images\help_screen.png')
     instructions_screen_bg = pygame.transform.scale(instructions_screen_bg,(WIDTH,HEIGHT))
     
     pygame.display.set_caption("Pedro: God of the Math") # Coloca o nome do jogo
     # Título e Ícone
-    icon = pygame.image.load('Experimentos\luis/assets\images\icon.png')
+    icon = pygame.image.load('../assets\images\icon.png')
     pygame.display.set_icon(icon)
     
     #Fonte
-    text_font = pygame.font.Font('Experimentos\luis/assets/font\Pixeled.ttf', 15)
-    tittle_font = pygame.font.Font('Experimentos\luis/assets/font\Pixeled.ttf', 30)
+    text_font = pygame.font.Font('../assets/font\Pixeled.ttf', 15)
+    tittle_font = pygame.font.Font('../assets/font\Pixeled.ttf', 30)
 
     while True:
         screen.blit(instructions_screen_bg, (0,0))
         mouse_pos = pygame.mouse.get_pos()
         # Imagem do botão (e a sua conversão para o tamanho ideal)
-        BUTTON_IMAGE = pygame.image.load("Experimentos\luis/assets\images\exit_icon.png")
+        BUTTON_IMAGE = pygame.image.load("../assets\images\exit_icon.png")
         BUTTON_IMAGE = pygame.transform.scale(BUTTON_IMAGE, (30, 30))
 
         QUIT_BUTTON = Button(BUTTON_IMAGE, 700, 87, font, "")
@@ -69,7 +69,7 @@ def instructions_screen(): # A tela de instruções
 def main_menu():
     pygame.display.set_caption("Pedro: God of the Math") # Coloca o nome do jogo
     # Título e Ícone
-    icon = pygame.image.load('Experimentos\luis/assets\images\icon.png')
+    icon = pygame.image.load('../assets\images\icon.png')
     pygame.display.set_icon(icon)
     
     while True:
@@ -79,7 +79,7 @@ def main_menu():
         BUTTONS_LIST = []
 
         # Imagem do botão (e a sua conversão para o tamanho ideal)
-        BUTTON_IMAGE = pygame.image.load("Experimentos\luis/assets\images\start_button.png")
+        BUTTON_IMAGE = pygame.image.load("../assets\images\start_button.png")
         BUTTON_IMAGE = pygame.transform.scale(BUTTON_IMAGE, (251, 81))
 
         # Botão de iniciar o jogo
