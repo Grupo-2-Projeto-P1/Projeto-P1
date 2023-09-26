@@ -1,3 +1,5 @@
+import pygame
+
 class Button():
     # Atributos
     def __init__(self, image, pos_x, pos_y, font, text_content) :
@@ -29,10 +31,12 @@ class Button():
         return False
     
     # Função para detectar se o mouse está em cima e mudar a cor do texto (dar sensação de que está sendo reconhecido)
-    def interaction_text_color(self, position): 
+    def interaction_text(self, position): 
         position_x = position[0] # A posição x é o primeiro elemento da tupla
         position_y = position[1] # A posição y é o segundo elemento da tupla
         if position_x in range(self.image_rect.left , self.image_rect.right) and position_y in range(self.image_rect.top, self.image_rect.bottom):
             self.text = self.font.render(self.text_content, True, "white")
+            self.image = pygame.transform.rotate(self.image, -2)
+            self.text = pygame.transform.rotate(self.text, -2)
         else:
-            self.text = self.font.render(self.text_content, True, "black") 
+            self.text = self.font.render(self.text_content, True, "black")
