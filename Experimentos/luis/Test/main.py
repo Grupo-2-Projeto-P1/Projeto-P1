@@ -2,11 +2,9 @@ import pygame
 from sys import exit 
 from pygame.locals import *
 from button import Button
-#from screens import *
 
 pygame.init()
 
-#Teste 
 muted = False # Variável para detectar se a música encontra-se mutada
 
 # Tamanho da tela 
@@ -72,22 +70,26 @@ def instructions_screen(): # A tela de instruções
                 exit()
             if event.type == pygame.MOUSEBUTTONDOWN:
                 if QUIT_BUTTON.clicked(mouse_pos):
+                    print(muted)
                     pygame.mixer.Sound.play(CLICK_SOUND)
-                    main_menu(muted)
+                    main_menu()
 
         pygame.display.update()
 
 
-def main_menu(muted_bool):
+def main_menu():
+    global muted
     pygame.display.set_caption("Pedro: God of the Math") # Coloca o nome do jogo
     # Título e Ícone
     icon = pygame.image.load('../assets\images\icon.png')
     pygame.display.set_icon(icon)
     button_image_path = "../assets\images\start_button.png"
-    if muted_bool:
+    
+    if muted: # Modificar o ícone se a música encontra-se mutada ou desmutada. 
         button_image_music_path = "../assets\images\muted_music_icon.png"
     else:
         button_image_music_path = "../assets\images\music_icon.png"
+    
     while True:
         screen.blit(bg_img, (0,0))
         mouse_pos = pygame.mouse.get_pos()
@@ -131,16 +133,16 @@ def main_menu(muted_bool):
                     instructions_screen()
                 if MUSIC_BUTTON.clicked(mouse_pos):
                     pygame.mixer.Sound.play(CLICK_SOUND)
-                    if muted_bool == False: 
-                        muted_bool = True
+                    
+                    if muted == False:  
+                        muted = True
                         button_image_music_path = "../assets\images\muted_music_icon.png"
                         pygame.mixer.music.pause()
                     else: # muted == True
-                        muted_bool = False 
+                        muted = False
                         button_image_music_path = "../assets\images\music_icon.png"
                         pygame.mixer.music.unpause()
-
         pygame.display.update()
 
-main_menu(muted)
+main_menu()
 
