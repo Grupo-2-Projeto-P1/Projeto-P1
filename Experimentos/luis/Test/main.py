@@ -1,6 +1,5 @@
 import pygame
 from sys import exit 
-from pygame.locals import *
 from button import Button
 
 pygame.init()
@@ -19,8 +18,9 @@ CLICK_SOUND = pygame.mixer.Sound('../assets/sounds/clicked_sound.mp3') # Efeito 
 
 # Definição do tamanho da tela e definição do background
 screen = pygame.display.set_mode((WIDTH,HEIGHT)) # Cria uma tela e determina o seu tamanho
-bg_img = pygame.image.load('../assets/images/main_background.png')
-bg_img = pygame.transform.scale(bg_img,(WIDTH,HEIGHT))
+
+# Relógio do fps
+relogio = pygame.time.Clock()
 
 # Fonte 
 font_path = '../assets/font\Pixeled.otf'
@@ -51,12 +51,14 @@ def instructions_screen(): # A tela de instruções
         QUIT_BUTTON = Button(BUTTON_IMAGE, 690, 127, font, "")
         QUIT_BUTTON.interaction_text(mouse_pos)
         QUIT_BUTTON.update(screen)
-               
+
+        # Conteúdo escrito da parte de instruções       
         STRING_LIST = ["O objetivo do jogo e passar pelo labirinto co-", "letando os itens dispostos no mapa. Para jo-,", "gar utilize as teclas WASD para movimentar", "o personagem. O quantidade coletada sera", "mostrada na tela. Divirta-se! :)"] 
+        
+        # Posição inicial da escrita (será usada como referência para determinar as próximas linhas)
         initial_x = 200
         initial_y = 170
-
-          
+ 
         write_text("INSTRUCOES", font_path, (0,0,0), 200, 110, 50)
 
         # Loop criado para printar cada string para simular a quebra de linha
@@ -70,22 +72,29 @@ def instructions_screen(): # A tela de instruções
                 exit()
             if event.type == pygame.MOUSEBUTTONDOWN:
                 if QUIT_BUTTON.clicked(mouse_pos):
-                    print(muted)
                     pygame.mixer.Sound.play(CLICK_SOUND)
                     main_menu()
-
+        relogio.tick(60)
         pygame.display.update()
 
 
 def main_menu():
     global muted
-    pygame.display.set_caption("Pedro: God of the Math") # Coloca o nome do jogo
+    
+    # Declarando a imagem de background do main_menu
+    bg_img = pygame.image.load('../assets/images/main_background.png')
+    bg_img = pygame.transform.scale(bg_img,(WIDTH,HEIGHT))
+    
     # Título e Ícone
+    pygame.display.set_caption("Pedro: God of the Math") # Coloca o nome do jogo
     icon = pygame.image.load('../assets\images\icon.png')
     pygame.display.set_icon(icon)
+    
+    # Imagem do botão 
     button_image_path = "../assets\images\start_button.png"
     
-    if muted: # Modificar o ícone se a música encontra-se mutada ou desmutada. 
+    # Modificar o ícone se a música encontra-se mutada ou desmutada. 
+    if muted: 
         button_image_music_path = "../assets\images\muted_music_icon.png"
     else:
         button_image_music_path = "../assets\images\music_icon.png"
@@ -142,6 +151,7 @@ def main_menu():
                         muted = False
                         button_image_music_path = "../assets\images\music_icon.png"
                         pygame.mixer.music.unpause()
+        relogio.tick(60)
         pygame.display.update()
 
 main_menu()
