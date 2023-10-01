@@ -4,15 +4,15 @@ O jogo "Pedro: The God of Math" foi desenvolvido inteiramente com a utilização
 
 ## Integrantes do projeto e suas responsabilidades:
 
-[Luís Moreira (lfsgm)] (https://github.com/Luisgsm324) - Criação das telas iniciais e organização da equipe. 
+[Luís Moreira (lfsgm)](https://github.com/Luisgsm324) - Criação das telas iniciais e organização da equipe. 
 
-[Luiz Veloso (lmvs)] (https://github.com/luizzmg) - Funcionamento dos coletáveis e organização do código. 
+[Luiz Veloso (lmvs)](https://github.com/luizzmg) - Funcionamento dos coletáveis e organização do código. 
 
-[Mateus Guerra (msg11)] (https://github.com/mateussguerra) - Movimentação e sprites do personagem. 
+[Mateus Guerra (msg11)](https://github.com/mateussguerra) - Movimentação e sprites do personagem. 
 
-[Talisson Mendes (tsms)] (https://github.com/talissonmendes) - Criação das telas iniciais e conceitos lógicos do mapa. 
+[Talisson Mendes (tsms)](https://github.com/talissonmendes) - Criação das telas iniciais e conceitos lógicos do mapa. 
 
-[Vitor Mendonça (vhmq)] (https://github.com/VitorMendonca62) - Criação do mapa e de seus conceitos lógicos. 
+[Vitor Mendonça (vhmq)](https://github.com/VitorMendonca62) - Criação do mapa e de seus conceitos lógicos. 
 
 
 ## Tecnologias e conceitos utilizados:
