@@ -19,12 +19,12 @@ screen = pygame.display.set_mode((width, height))
 pygame.display.set_caption("Teste")
 clock = pygame.time.Clock()
 
-# Crie uma instância de Map
 map = Map(screen)
 
 # prevenindo contra erro de quantidade de coletáveis
 if map.works:
     play = True
+    
 else:
     play = False
     print("\n\nSe liga pq falhou:\n")
@@ -34,6 +34,9 @@ def desenhar_texto(texto, tamanho, cor, x, y):
     fonte = pygame.font.Font(None, tamanho)
     texto = fonte.render(texto, True, cor)
     screen.blit(texto, (x, y))
+
+# variável de controle para verificar se o jogador venceu
+jogador_venceu = False
 
 while game_running and play:
     screen.fill((0, 0, 0))
@@ -59,6 +62,22 @@ while game_running and play:
 
     pygame.draw.rect(screen, yellow, (10 + dist * 3, height - 27, 20, 20))
     desenhar_texto(f"({map.collected['y']}/{map.symbols_collectibles['y']})", 30, white, 35 + dist * 3, height - 27)
+
+    # verificando se o jogador alcançou a saída do labirinto após coletar todos os objetos
+    if map.works and all(map.collected[symbol] >= map.symbols_collectibles[symbol] for symbol in map.symbols_collectibles):
+        exit_position = map.find_exit_position()
+        
+        if exit_position:
+            player_rect = pygame.Rect(player, 20, 20)
+            exit_x, exit_y = exit_position
+            
+            if player_rect.colliderect(pygame.Rect(exit_x, exit_y, 20, 20)):
+                jogador_venceu = True  # Define jogador_venceu como True
+
+    # mensagem de vitória se o jogador venceu
+    if jogador_venceu:
+        mensagem_vitoria = "Parabéns! Você venceu o jogo!"
+        desenhar_texto(mensagem_vitoria, 36, white, width // 2 - 200, height // 2 - 18)
 
     clock.tick(30)
     pygame.display.update()
