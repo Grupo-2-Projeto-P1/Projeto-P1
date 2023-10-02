@@ -21,7 +21,7 @@ O projeto adotou a linguagem de programação Python como a principal ferramenta
 
 O Pygame foi utilizado como a principal biblioteca para dar corpo para a ideia de construir um jogo em Python. Essa ferramenta é extremamente utilizada e devido a isso tem-se uma facilidade em encontrar conteúdo acerca de como utilizar adequadamente, além de sua ótima documentação, facilitando a construção do projeto.  
 
-As outras ferramentas, que seriam o Sys e o cv2, tiveram papéis secundários, porém importantes, em que utilizamos a função exit do Sys, que consiste em uma função que permitirá a finalização do código sem o acontecimento de erros, a biblioteca cv2 foi utilizada para a criação do mapa do labirinto e a Random permitiu que... 
+As outras ferramentas, que seriam o Sys e o cv2, tiveram papéis secundários, porém importantes, em que utilizamos a função exit do Sys, que consiste em uma função que permitirá a finalização do código sem o acontecimento de erros, a biblioteca OpenCV foi utilizada para a criação do mapa do labirinto e a Random permitiu que os coletáveis surgissem em posições diferentes a cada vez que o jogo é iniciado, permitindo um ambiente mais desafiador ao usuário. 
 
 ## Conceitos de programação aplicados no projeto: 
 
