@@ -1,5 +1,8 @@
 # Pedro: The God of Math
-O jogo "Pedro: The God of Math" foi desenvolvido inteiramente com a utilização da linguagem Python com a adoção de certas bibliotecas, sendo a principal o Pygame. A jogabilidade é voltada no controle do personagem para que ele consiga coletar os itens dispostos em um labirinto, sendo necessário, após a coleta, chegar no fim do labirinto. O projeto, mentorado pelos nossos professores Filipe Calegário e Sérgio Soares, foi feito a fim da obtenção da nota relativa ao projeto final da disciplina de Programação 1.  
+
+<img src="main project/assets/logo.png">
+
+O jogo "Pedro: The God of Math" foi desenvolvido inteiramente com a utilização da linguagem Python e a adoção de algumas bibliotecas, sendo a principal o Pygame. A jogabilidade é voltada no controle do personagem para que ele consiga coletar os itens dispostos em um labirinto, sendo necessário, após a coleta de todos os objetos, chegar no fim do labirinto. O projeto, mentorado pelos nossos professores Filipe Calegário, XXXX e Sérgio Soares, foi feito a fim da obtenção da nota relativa ao projeto final da disciplina de Programação 1.
 
 
 ## Integrantes do projeto e suas responsabilidades:
