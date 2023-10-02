@@ -17,7 +17,7 @@ O jogo "Pedro: The God of Math" foi desenvolvido inteiramente com a utilização
 
 ## Ferramentas, Bibliotecas e Frameworks utilizados: 
 
-O projeto adotou a linguagem de programação Python como a principal ferramenta de construção, adotando bibliotecas desta linguagem, como o Pygame, Sys, cv2 e Random.  
+O projeto adotou a linguagem de programação Python como a principal ferramenta de construção, adotando bibliotecas desta linguagem, como o Pygame, Sys, OpenCV e Random.  
 
 O Pygame foi utilizado como a principal biblioteca para dar corpo para a ideia de construir um jogo em Python. Essa ferramenta é extremamente utilizada e devido a isso tem-se uma facilidade em encontrar conteúdo acerca de como utilizar adequadamente, além de sua ótima documentação, facilitando a construção do projeto.  
 
