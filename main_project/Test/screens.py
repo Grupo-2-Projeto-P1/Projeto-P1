@@ -1,5 +1,6 @@
 import pygame
 from button import Button
+from main_project import main_game
 
 pygame.init()
 
@@ -101,6 +102,7 @@ def main_menu():
             if event.type == pygame.MOUSEBUTTONDOWN:
                 if START_BUTTON.clicked(mouse_pos):
                     print("Clicado")
+                    main_game()
                 if INSTRUCTIONS_BUTTON.clicked(mouse_pos):
                     help_screen()
 
