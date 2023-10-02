@@ -2,8 +2,11 @@
 
 <img src="main project/assets/logo.png">
 
-O jogo "Pedro: The God of Math" foi desenvolvido inteiramente com a utilização da linguagem Python e a adoção de algumas bibliotecas, sendo a principal o Pygame. A jogabilidade é voltada no controle do personagem para que ele consiga coletar os itens dispostos em um labirinto, sendo necessário, após a coleta de todos os objetos, chegar no fim do labirinto. O projeto, mentorado pelos nossos professores Filipe Calegário, Ricardo Massa e Sérgio Soares, foi feito a fim da obtenção da nota relativa ao projeto final da disciplina de Programação 1.
+O jogo "Pedro: The God of Math" foi desenvolvido inteiramente com a utilização da linguagem Python e a adoção de algumas bibliotecas, sendo a principal o Pygame. A jogabilidade é voltada no controle do personagem para que ele consiga coletar o conjunto dos quatro itens diferentes dispostos em um labirinto, sendo necessário, após a coleta de todos os objetos, chegar no fim do labirinto. Criamos um sistema interativo topdown 2D e utilizamos Programação Orientada a Objeto para encorporá-lo. O projeto, mentorado pelos nossos professores Filipe Calegário, Ricardo Massa e Sérgio Soares, foi feito a fim da obtenção da nota relativa ao projeto final da disciplina de Programação 1 do curso de Sistemas de Informação.
 
+## Motivações e funcionalidades:
+
+O nome do jogo é uma homenagem ao nosso professor das disciplinas de Cálculo 1 e Matemática Discreta Pedro Manhães, atribuindo a ele o nome figurativo de Deus da matemática. A motivação do projeto é também fazer do usuário um Deus da matemática, na medida em que o mesmo é desafiado pelo labirinto a coletar 4 diferentes conjuntos numéricos (Naturais, Inteiros, Racionais e Reais) e absorver tais conhecimentos que irão possibilitar o mérito divino. O movimento do jogador é controlado através das teclas W (para cima), A (para esquerda), S (para baixo) e D (para esquerda). Para a execução do código, é necessário o Python e pygame instalados, além do download zip da branch main desse repositório para enfim executar o arquivo main.py.
 
 ## Integrantes do projeto e suas responsabilidades:
 
@@ -16,6 +19,10 @@ O jogo "Pedro: The God of Math" foi desenvolvido inteiramente com a utilização
 [Talisson Mendes (tsms)](https://github.com/talissonmendes) - Criação das telas iniciais e conceitos lógicos do mapa. 
 
 [Vitor Mendonça (vhmq)](https://github.com/VitorMendonca62) - Criação do mapa e de seus conceitos lógicos. 
+
+## Organização do código: 
+
+PREENCHER AINDA
 
 
 ## Ferramentas, Bibliotecas e Frameworks utilizados: 
@@ -41,3 +48,9 @@ Paralelamente, a coordenação de tarefas foi um problema no início do projeto,
 Por fim, toda a experiência de construir o sistema interativo, tanto os momentos bons como os ruins, acrescentou bastante na nossa evolução como estudante e futuros profissionais, ampliando nossos conhecimentos acerca de certos recursos em construção de projetos de programação, técnicas para organização em trabalho em equipe e o aprendizado mais pleno e aplicado dos conceitos aprendidos ao decorrer da disciplina. Levamos como lições esses conhecimentos que pudemos tirar desse projeto como um todo. 
 
 ## Galeria de imagens do Pedro: The God of Math
+
+PREENCHER AINDA
+
+## Link para repositório git ou equivalente; ou link para baixar o código fonte
+
+PREENCHER AINDA
