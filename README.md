@@ -15,15 +15,26 @@ O jogo "Pedro: The God of Math" foi desenvolvido inteiramente com a utilização
 [Vitor Mendonça (vhmq)](https://github.com/VitorMendonca62) - Criação do mapa e de seus conceitos lógicos. 
 
 
-## Tecnologias e conceitos utilizados:
+## Ferramentas, Bibliotecas e Frameworks utilizados: 
 
-O projeto adotou a linguagem de programação **Python** como a principal ferramenta de construção, adotando bibliotecas desta linguagem, como o **Pygame**, **Sys** e o **cv2**. Durante a construção do projeto, as tecnologias foram utilizadas a fim de auxiliar e tornar possível a ideia da produção do **"Pedro: The God of Math"**. A preferência por adotar essas bibliotecas em contraposição a outras decorre pela alta documentação existente, principalmente a do **Pygame**, a principal biblioteca do projeto, facilitando a compreensão dos seus conceitos.  
+O projeto adotou a linguagem de programação Python como a principal ferramenta de construção, adotando bibliotecas desta linguagem, como o Pygame, Sys, cv2 e Random.  
 
-Adotamos os conceitos de programação aprendidos ao longo da disciplina de Programação 1 na construção do sistema interativo. Entre esses conceitos, podemos citar a adoção de **Estruturas Condicionais** (IF, ELSE, ELIF), **Laços de Repetição**, **Listas**, **Dicionários** e **Programação Orientada a Objetos** (POO). O último recurso é considerado requisito obrigatório para a construção do projeto. 
+O Pygame foi utilizado como a principal biblioteca para dar corpo para a ideia de construir um jogo em Python. Essa ferramenta é extremamente utilizada e devido a isso tem-se uma facilidade em encontrar conteúdo acerca de como utilizar adequadamente, além de sua ótima documentação, facilitando a construção do projeto.  
 
-## Desafios da construção do projeto:
+As outras ferramentas, que seriam o Sys e o cv2, tiveram papéis secundários, porém importantes, em que utilizamos a função exit do Sys, que consiste em uma função que permitirá a finalização do código sem o acontecimento de erros, a biblioteca cv2 foi utilizada para a criação do mapa do labirinto e a Random permitiu que... 
 
-Os principais desafios encontrados durante a construção do jogo **"Pedro: The God of Math"** foram as dificuldades em compreender com plenitude os conceitos de POO, a utilização de uma nova biblioteca e de tecnologias, como o Github, e a coordenação de tarefas em um projeto de programação em um grupo.  
+## Conceitos de programação aplicados no projeto: 
 
-Esses desafios foram sendo consertados com o passar das semanas do projeto, obtendo resultados surpreendentes quanto à manipulação dos recursos da biblioteca Pygame e da facilidade em utilizar o GitHub. Os problemas de não estar familiarizado a um ambiente de cooperação na parte da execução de uma produção em programação foram se ajustando igualmente aos outros desafios, a coordenação e cooperação foram se adequando com o passar do tempo e conseguimos construir uma estrutura organizada de trabalho em equipe.  
+Adotamos os conceitos de programação aprendidos ao longo da disciplina de Programação 1 na construção do sistema interativo. Entre esses conceitos, podemos citar a adoção de Estruturas Condicionais (IF, ELSE, ELIF), Laços de Repetição, Listas, Dicionários e Programação Orientada a Objetos (POO). O último recurso é considerado requisito obrigatório para a construção do projeto, então fizemos um largo estudo para aplicar de forma adequada e necessária.  
 
+## Desafios e aprendizados durante o projeto: 
+
+Os principais desafios encontrados durante a construção do jogo "Pedro: The God of Math" foram a utilização de uma nova biblioteca e de tecnologias, como o Github, e a coordenação de tarefas em um projeto de programação em um grupo.  
+
+Dedicamos o início do projeto para o estudos desses conceitos de Programação Orientada a Objetos e a biblioteca que utilizaríamos, entretanto notamos certos problemas na compreensão por parte dos integrantes de tecnologias que não estávamos habituados a utilizar, como o Pygame e Github. Em nossa concepção, esta dificuldade foi o maior desafio que tivemos durante o projeto, pois tivemos que dedicar mais tempo e atenção para essa questão. Então, como forma de resolver, outros membros, que haviam compreendido a temática, dedicaram-se a instruir o uso adequado e focar em compreender com totalidade esses recursos. Os resultados foram agradáveis e conseguimos nos ajustar com o problema apresentado, além de conseguirmos aprender significativamente essas tecnologias.   
+
+Paralelamente, a coordenação de tarefas foi um problema no início do projeto, ocasionado pela falta de experiência dos integrantes da equipe de participação em trabalhos cooperativos de programação. Acreditamos que este tenha sido um dos principais erros do projeto, pois essa falta de formalização das responsabilidades proporcionaram uma perda de tempo produtivo no início da construção do sistema interativo. Como forma de solucionar, objetivamos nos organizar de forma eficiente por meio de uma conversa em equipe para definir as funções e utilizar de forma eficiente os canais de comunicação criados com este objetivo.  
+
+Por fim, toda a experiência de construir o sistema interativo, tanto os momentos bons como os ruins, acrescentou bastante na nossa evolução como estudante e ampliaram nossos conhecimentos acerca de certos recursos em construção de projetos de programação, técnicas para organização em trabalho em equipe e o aprendizado mais pleno e aplicado dos conceitos aprendidos ao decorrer da disciplina. Levamos como lições esses conhecimentos que podemos tirar desse projeto como um todo. 
+
+## Galeria de imagens do Pedro: The God of Math
